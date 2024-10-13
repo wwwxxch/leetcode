@@ -13,4 +13,24 @@
 #         self.right = right
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        
+        if root is None:
+            return []
+
+        result = []
+        stack = []
+        current = root
+        prev = None
+
+        while current or stack:
+            if current:
+                stack.append(current)
+                current = current.left
+            else:
+                peekNode = stack[-1]
+                if peekNode.right and prev != peekNode.right:
+                    current = peekNode.right
+                else:
+                    result.append(peekNode.val)
+                    prev = stack.pop()
+
+        return result
