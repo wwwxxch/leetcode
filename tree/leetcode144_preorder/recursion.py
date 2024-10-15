@@ -13,30 +13,6 @@
 #         self.right = right
 
 
-# Iteration
-class Solution1(object):
-    def preorderTraversal(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[int]
-        """
-        result = []
-        stack = []
-        current = root
-
-        while stack or current:
-            while current:
-                result.append(current.val)
-                stack.append(current)
-                current = current.left
-
-            current = stack.pop()
-            current = current.right
-
-        return result
-
-
-# Recursion
 class Solution2(object):
     def preorderTraversal(self, root):
         """

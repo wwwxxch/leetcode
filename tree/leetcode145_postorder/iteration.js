@@ -17,7 +17,6 @@
  * @return {number[]}
  */
 
-// Iteration
 // Add console.log
 var postorderTraversal = function (root) {
   if (!root) return [];
@@ -66,6 +65,7 @@ var postorderTraversal = function (root) {
   return result;
 };
 
+// ----------------------------------------------------------------------
 var postorderTraversal = function (root) {
   if (!root) return [];
 
@@ -94,14 +94,4 @@ var postorderTraversal = function (root) {
     }
   }
   return result;
-};
-
-// Recursion
-var postorderTraversal = function (root) {
-  if (!root) return [];
-  return [
-    ...postorderTraversal(root.left),
-    ...postorderTraversal(root.right),
-    root.val,
-  ];
 };

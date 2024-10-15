@@ -13,16 +13,7 @@
 #         self.right = right
 
 
-# Recursion
-class Solution1:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        if root is None:
-            return []
-        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
-
-
-# Iteration
-class Solution2:
+class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         stack = []

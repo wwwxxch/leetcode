@@ -16,6 +16,7 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+
 var inorderTraversal = function (root) {
   if (!root) return [];
   let result = [];
@@ -31,13 +32,4 @@ var inorderTraversal = function (root) {
     current = current.right; // move to right subtree
   }
   return result;
-};
-
-var inorderTraversal = function (root) {
-  if (!root) return [];
-  return [
-    ...inorderTraversal(root.left),
-    root.val,
-    ...inorderTraversal(root.right),
-  ];
 };

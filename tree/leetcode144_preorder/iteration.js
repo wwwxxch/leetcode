@@ -6,7 +6,7 @@
 
 // Iterative
 // Time complexity: O(n), because go through each node
-// Space complexity: O(h), h is the height of the tree // ! ??
+// Space complexity: O(h), h is the height of the tree // !
 var preorderTraversal = function (root) {
   let result = []; // save the result
   let stack = []; //  temporary store the current node
@@ -23,14 +23,4 @@ var preorderTraversal = function (root) {
     current = current.right; // move to the right subtree
   }
   return result;
-};
-
-// Recursive
-var preorderTraversal = function (root) {
-  if (!root) return [];
-  return [
-    root.val,
-    ...preorderTraversal(root.left),
-    ...preorderTraversal(root.right),
-  ];
 };
