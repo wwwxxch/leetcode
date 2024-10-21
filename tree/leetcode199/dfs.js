@@ -22,8 +22,12 @@ var rightSideView = function (root) {
   const result = [];
 
   const dfs = function (node, level) {
-    console.log("-------------------------------------")
-    console.log(`Entering dfs with node value: ${node ? node.val : "null"}, level: ${level}`);
+    console.log("-------------------------------------");
+    console.log(
+      `Entering dfs with node value: ${
+        node ? node.val : "null"
+      }, level: ${level}`
+    );
 
     if (!node) return;
 
@@ -50,7 +54,7 @@ var rightSideView = function (root) {
     dfs(node.left, level + 1);
 
     console.log(`Finished processing node ${node.val}`);
-    console.log("====================================")
+    console.log("-------------------------------------");
   };
 
   dfs(root, 0);
